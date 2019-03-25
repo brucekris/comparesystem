@@ -8,7 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <link rel="stylesheet" href="../sass/style.css">
         <!-- Styles -->
         <style>
             html, body {
@@ -80,10 +80,7 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Selectronics
-                </div>
-                <img src="../public/images/home-banner.jpg">
+                <img src="../public/images/galaxy-fold.jpg">
                 
             </div>
         </div>
@@ -113,10 +110,45 @@
   <div class="w3-display-middle w3-margin-top w3-center">
 
     <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Selectronics®</b></span></h1>
+    <section class="home_banner_area">
+    <div class="banner_inner">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="home_left_img">
+              <img class="img-fluid" src="img/banner/home-left.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="banner_content">
+              <h2>
+                For All Occasion <br>
+                HairStyle is a Must <br>
+                Try Fashion
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp or incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim.
+              </p>
+              <div class="d-flex align-items-center">
+                <a id="play-home-video" class="video-play-button" href="https://www.youtube.com/watch?v=vParh5wE-tM">
+                  <span></span>
+                </a>
+                <div class="watch_video text-uppercase">
+                  watch the video
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   </div>
+
   <div class="w3-display-bottommiddle w3-margin-top w3-center">
 
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Selectronics®</b></span></h1>
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Compare your device</b><i class="fas fa-mobile"></i></span></h1>
   </div>
 
 <!-- Page content -->
@@ -186,7 +218,15 @@
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
       occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-      laboris nisi ut aliquip ex ea commodo consequat.
+      laboris nisi ut aliquip ex ea commodo consequat.<div class="d-flex align-items-center">
+                <a id="play-home-video" class="video-play-button" href="#">
+                  <span></span>
+                </a>
+                <div class="watch_video text-uppercase">
+                  watch the video
+                </div>
+              </div>
+
     </p>
   </div>
 
