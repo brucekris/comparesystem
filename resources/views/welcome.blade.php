@@ -59,6 +59,10 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            body {
+      background-image: url("../public/images/bgimg.jpg");
+      background-repeat: repeat;
+      } 
         </style>
     </head>
     <body class ="theme-dark">
@@ -104,9 +108,9 @@
       @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
                         <a href="#bestphones">Best phones</a>
                         <a href="#latestnews">Latest News</a>
+                        <a href="{{ url('/home') }}">Account</a>
                     @else
                         <a href="#bestphones">Best phones</a>
                         <a href="#latestnews">Latest News</a>
@@ -134,7 +138,7 @@
   <!-- Project Section -->
 
   <div class="w3-container w3-padding-32" id="latestnews">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Latest News</h3>
+    <h3 class="w3-border-bottom w3-border-black w3-padding-16">Latest News</h3>
   </div>
 
   <div class="w3-row-padding w3-grayscale">
@@ -171,7 +175,7 @@
 
   <!-- About Section -->
   <div class="w3-container w3-padding-32" id="bestphones">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Most Populair phones</h3>
+    <h3 class="w3-border-bottom w3-border-black w3-padding-16">Most Populair phones</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
       occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
       laboris nisi ut aliquip ex ea commodo consequat.<div class="d-flex align-items-center">
