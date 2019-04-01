@@ -82,7 +82,7 @@
             @endif
 
             <div class="content">
-                <img src="../public/images/phones.jpg">
+                <img src="../public/images/phones.png">
                 
             </div>
         </div>
