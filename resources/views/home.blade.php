@@ -30,44 +30,24 @@
       color: white;
       padding: 15px;
     }
+    .content {
+                text-align: center;
+            }
+    body {
+      background-image: url("../public/images/sand.jpg");
+      } 
   </style>
 </head>
 <body>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>    
-  </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      
-      <form class="navbar-form navbar-right" role="search">
-        <div class="form-group input-group">
-          <input type="text" class="form-control" placeholder="Search..">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="button">
-              <span class="glyphicon glyphicon-search"></span>
-            </button>
-          </span>        
-        </div>
-      </form>
-      <ul class="nav navbar-nav navbar-left">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-  
+<div>
+<br>
+<br>
 <div class="container text-center">    
   <div class="row">
     <div class="col-sm-3 well">
       <div class="well">
         <p><a href="#">My Profile</a></p>
-        <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        <img src="../public/images/user1.png" class="img-circle" height="65" width="65" alt="Avatar">
       </div>
       <div class="well">
         <p><a href="#">Interests</a></p>
@@ -133,7 +113,7 @@
       <div class="row">
         <div class="col-sm-3">
           <div class="well">
-           <p>Jane</p>
+           <p>Bio:</p>
           </div>
         </div>
         <div class="col-sm-9">
@@ -145,7 +125,7 @@
       <div class="row">
         <div class="col-sm-3">
           <div class="well">
-           <p>Anja</p>
+           <p>lol</p>
           </div>
         </div>
         <div class="col-sm-9">
@@ -157,7 +137,7 @@
     </div>
     <div class="col-sm-2 well">
       <div class="thumbnail">
-        <p>Upcoming Events:</p>
+        <p>Favourite phones:</p>
         <img src="paris.jpg" alt="Paris" width="400" height="300">
         <p><strong>Paris</strong></p>
         <p>Fri. 27 November 2015</p>
@@ -173,9 +153,6 @@
   </div>
 </div>
 
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
-</footer>
 
 </body>
 </html>
