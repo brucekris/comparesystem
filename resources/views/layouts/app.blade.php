@@ -113,9 +113,9 @@
 
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-
-                                    <a id="hov1" href="{{ url('/comparing') }}"><span class="glyphicon glyphicon-stats"></span>Compare</a><br>
-
+                                    <a class="dropdown-item" href="{{ url('/home') }}"><span class="glyphicon glyphicon-home"></span>Home</a><br>
+                                    <a class="dropdown-item" href="{{ url('/comparing') }}"><span class="glyphicon glyphicon-stats"></span>Compare</a><br>
+                                    <a class="dropdown-item" href="{{ url('/books') }}"><span class="glyphicon glyphicon-file"></span>Device Database</a><br>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -159,5 +159,7 @@
 <main class="py-4">
             @yield('content')
         </main>
+
+<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

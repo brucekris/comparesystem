@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Book;
 
 class compareController extends Controller
 {
     public function index()
     {
-        return view('comparing');
+
+    	 $books = Book::all();
+
+        return view('comparing', compact('books'));
     }
 }
 

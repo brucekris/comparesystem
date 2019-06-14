@@ -1,99 +1,116 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="">
-            <div class="card">
-                <div class="card-header">User Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
+<div class="row justify-content-center">
+<div class="">
+<div class="card">
+<div class="card-header">User Dashboard</div>
+<div class="card-body">
+@if (session('status'))
+<div class="alert alert-success" role="alert">
+   {{ session('status') }}
+</div>
+@endif
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <style>    
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
-    .content {
-                text-align: center;
-            }
-    body {
-      background-image: url("../public/images/sand.jpg");
-      } 
-  </style>
-</head>
-<body>
-<div></div>
-<div>
-Select Brand
-<table class="table table-striped table-dark">
-  <thead>
-    <tr>
-      <th scope="col"><h1>Phone</h1></th>
-      <th scope="col">Phone 1</th>
-      <th scope="col">Phone 2</th>
-      <th scope="col">Phone 3</th>
-      <th scope="col">Phone 4</th>
-      <th scope="col">Result?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Price</th>
-      <td>$100</td>
-      <td>$499</td>
-      <td>$299</td>
-      <td>$1000</td>
-      <td>+</td>
-    </tr>
-    <tr>
-      <th scope="row">Display</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">Memory</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">Battery</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">Sound</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-
-  </tbody>
-</table>
-</div>
-</div>
-
-
-</body>
+   <head>
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <style>    
+         /* Set black background color, white text and some padding */
+         footer {
+         background-color: #555;
+         color: white;
+         padding: 15px;
+         }
+         .content {
+         text-align: center;
+         }
+         body {
+         background-image: url("../public/images/galaxys.jpg");
+         } 
+         * {
+         box-sizing: border-box;
+         }
+         #myInput {
+         background-position: 10px 10px;
+         background-repeat: no-repeat;
+         width: 100%;
+         font-size: 16px;
+         padding: 12px 20px 12px 40px;
+         border: 1px solid #ddd;
+         margin-bottom: 12px;
+         }
+         #myTable {
+         border-collapse: collapse;
+         width: 100%;
+         border: 1px solid #ddd;
+         font-size: 18px;
+         }
+         #myTable th, #myTable td {
+         text-align: left;
+         padding: 12px;
+         }
+         #myTable tr {
+         border-bottom: 1px solid #ddd;
+         }
+         #myTable tr.header, #myTable tr:hover {
+         background-color: #f1f1f1;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="uper">
+      @if(session()->get('success'))
+      <div class="alert alert-success">
+         {{ session()->get('success') }}  
+      </div>
+      <br />
+      @endif
+      <h1>Select Phone</h1>
+      <br><br>
+      <input type="text"  id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+      <table id="myTable">
+         <tr class="header">
+            <th style="width:60%;">Phone Name</th>
+         </tr>
+         <tr>
+            @foreach($books as $book)
+            <td>
+              <a href="{{ route('books.show', ['id' => $book->id]) }}" class="getBook">
+                {{$book->phone_name}}
+              </a>
+            </td>
+         </tr>
+         @endforeach
+      </table>
+      <div id="product_info">
+        <!-- ajax data inladen -->
+      </div>
+      <script>
+         function myFunction() {
+           var input, filter, table, tr, td, i, txtValue;
+           input = document.getElementById("myInput");
+           filter = input.value.toUpperCase();
+           table = document.getElementById("myTable");
+           tr = table.getElementsByTagName("tr");
+           for (i = 0; i < tr.length; i++) {
+             td = tr[i].getElementsByTagName("td")[0];
+             if (td) {
+               txtValue = td.textContent || td.innerText;
+               if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                 tr[i].style.display = "";
+               } else {
+                 tr[i].style.display = "none";
+               }
+             }       
+           }
+         }
+      </script>
+   </body>
 </html>
-
 @endsection

@@ -20,3 +20,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/comparing', 'CompareController@index')->name('comparing');
 Route::get('/home/create', 'ShareController@index')->name('create');
+Route::resource('books', 'BookController');

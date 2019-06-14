@@ -34,7 +34,7 @@
                 text-align: center;
             }
     body {
-      background-image: url("../public/images/sand.jpg");
+      background-image: url("../public/images/galaxys.jpg");
       } 
   </style>
 </head>
@@ -76,7 +76,7 @@
           <div class="panel panel-default text-left">
             <div class="panel-body">
                 {{-- <p contenteditable="true">Current phone: Samsung S10</p> --}}
-              <p>Current phone: Samsung S10</p>
+              <p>Favorite Phone: Samsung S10</p>
               <img src="../public/images/galaxys10.jpg" class="img-circle" height="55" width="55" alt="Avatar">
               <button type="button" class="btn btn-default btn-sm">
                 <span class="glyphicon glyphicon-pencil"></span> edit
