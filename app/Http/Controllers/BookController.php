@@ -66,7 +66,48 @@ class BookController extends Controller
      */
     public function show($id)
     {
-        return 'phone_name - '.$id;
+
+        $book = Book::find($id);
+
+        return view('book.show')
+            ->with('book', $book);
+
+        return [
+            'Phone name - ', $book->phone_name, '<br>',
+            'Description - ', $id, '<br>',
+            'Price - ', $id, '<br>',
+            'Display - ', $id, '<br>',
+            'Battery - ', $id, '<br>',
+            'Storage - ', $id, '<br>',
+            'Processor - ', $id, '<br>',
+            'Camera - ', $id, '<br>',
+            'Network - ', $id, '<br>',
+            'Waterproof - ', $id, '<br>',
+
+    ];
+    }
+
+     public function show1($id)
+    {
+
+        $book = Book::find($id);
+
+        return view('book.show1')
+            ->with('book', $book);
+
+        return [
+            'Phone name - ', $book->phone_name, '<br>',
+            'Description - ', $id, '<br>',
+            'Price - ', $id, '<br>',
+            'Display - ', $id, '<br>',
+            'Battery - ', $id, '<br>',
+            'Storage - ', $id, '<br>',
+            'Processor - ', $id, '<br>',
+            'Camera - ', $id, '<br>',
+            'Network - ', $id, '<br>',
+            'Waterproof - ', $id, '<br>',
+
+    ];
     }
 
     /**

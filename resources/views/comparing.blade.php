@@ -48,6 +48,7 @@
          #myTable {
          border-collapse: collapse;
          width: 100%;
+         float:left;
          border: 1px solid #ddd;
          font-size: 18px;
          }
@@ -64,32 +65,62 @@
       </style>
    </head>
    <body>
-      <div class="uper">
-      @if(session()->get('success'))
-      <div class="alert alert-success">
-         {{ session()->get('success') }}  
-      </div>
-      <br />
-      @endif
-      <h1>Select Phone</h1>
-      <br><br>
-      <input type="text"  id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-      <table id="myTable">
-         <tr class="header">
-            <th style="width:60%;">Phone Name</th>
-         </tr>
-         <tr>
-            @foreach($books as $book)
-            <td>
-              <a href="{{ route('books.show', ['id' => $book->id]) }}" class="getBook">
-                {{$book->phone_name}}
-              </a>
-            </td>
-         </tr>
-         @endforeach
-      </table>
-      <div id="product_info">
-        <!-- ajax data inladen -->
+      <div class="container">
+         <div class="row">
+            @if(session()->get('success'))
+            <div class="alert alert-success">
+               {{ session()->get('success') }}  
+            </div>
+            <br />
+            @endif
+            <h1>Select Phone</h1>
+            <br><br>
+            <input type="text"  id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+            <table id="myTable" class="col-sm">
+               <tr class="header">
+                  <th style="width:60%;">Phone 1</th>
+               </tr>
+               <tr>
+                  @foreach($books as $book)
+                  <td>
+                     <a href="{{ route('books.show', ['id' => $book->id]) }}" class="getBook">
+                     {{$book->phone_name}}
+                     </a>
+                  </td>
+               </tr>
+               @endforeach
+            </table>
+            <table id="myTable" class="col-sm">
+               <tr class="header">
+                  <th style="width:60%;">Phone 2</th>
+               </tr>
+               <tr>
+                  @foreach($books as $book)
+                  <td>
+                     <a href="{{ route('books.show', ['id' => $book->id]) }}" class="getBook1">
+                     {{$book->phone_name}}
+                     </a>
+                  </td>
+               </tr>
+               @endforeach
+            </table>
+            
+            <br><br>
+            <tr id="">
+               <td>
+                  <div id="product_info" class="col-sm">
+                     <!-- ajax data inladen -->
+                  </div>
+               </td>
+            </tr>
+            <tr id="">
+               <td>
+                  <div id="product_info1" class="col-sm">
+                     <!-- ajax data inladen -->
+                  </div>
+               </td>
+            </tr>
+         </div>
       </div>
       <script>
          function myFunction() {
