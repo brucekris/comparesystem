@@ -75,7 +75,11 @@
             @endif
             <h1>Select Phone</h1>
             <br><br>
-            <input type="text"  id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+            {{-- search function --}}
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+            {{-- foreach loop die alle telefoons showt --}}
             <table id="myTable" class="col-sm">
                <tr class="header">
                   <th style="width:60%;">Phone 1</th>
@@ -109,14 +113,14 @@
             <tr id="">
                <td>
                   <div id="product_info" class="col-sm">
-                     <!-- ajax data inladen -->
+                     <!-- ajax data inladen van phone 1 -->
                   </div>
                </td>
             </tr>
             <tr id="">
                <td>
                   <div id="product_info1" class="col-sm">
-                     <!-- ajax data inladen -->
+                     <!-- ajax data inladen van phone 2 -->
                   </div>
                </td>
             </tr>

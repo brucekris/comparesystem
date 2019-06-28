@@ -114,6 +114,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ url('/home') }}"><span class="glyphicon glyphicon-home"></span>Home</a><br>
+                                    <a class="dropdown-item" href="{{ url('/phonedata') }}"><span class="glyphicon glyphicon-phone"></span>Phones</a><br>
                                     <a class="dropdown-item" href="{{ url('/comparing') }}"><span class="glyphicon glyphicon-stats"></span>Compare</a><br>
                                     <a class="dropdown-item" href="{{ url('/books') }}"><span class="glyphicon glyphicon-file"></span>Device Database</a><br>
                                     <a class="dropdown-item" href="{{ route('logout') }}"

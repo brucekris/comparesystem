@@ -76,11 +76,10 @@
           <div class="panel panel-default text-left">
             <div class="panel-body">
                 {{-- <p contenteditable="true">Current phone: Samsung S10</p> --}}
-              <p>Favorite Phone: Samsung S10</p>
-              <img src="../public/images/galaxys10.jpg" class="img-circle" height="55" width="55" alt="Avatar">
-              <button type="button" class="btn btn-default btn-sm">
-                <span class="glyphicon glyphicon-pencil"></span> edit
-              </button>     
+              <b><p>Favorite Phone:</p></b><br>
+               Samsung S10
+              <img src="../public/images/galaxys10.png" class="img-circle" height="55" width="55" alt="Avatar">
+                <a href="{{ route('phonedata')}}" class="glyphicon glyphicon-pencil btn btn-primary">Edit</a>
             </div>
           </div>
         </div>

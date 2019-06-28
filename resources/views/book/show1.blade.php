@@ -1,3 +1,4 @@
+<p><h1><b>Phone 1:</b></h1></p><br>
 <b>Phone Name: </b>{{ $book->phone_name }}<br>
 <b>Price: </b>{{ $book->price }}<br>
 <b>Display: </b>{{ $book->display }}<br>

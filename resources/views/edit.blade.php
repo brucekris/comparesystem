@@ -28,7 +28,7 @@
               <input type="text" class="form-control" name="phone_name" value="{{$book->phone_name}}"/>
           </div>
           <div class="form-group">
-              <label for="price">Description :</label>
+              <label for="price">Review :</label>
               <input type="text" class="form-control" name="description" value="{{$book->description}}"/>
           </div>
           <div class="form-group">

@@ -110,11 +110,14 @@
                @if (Route::has('login'))
                <div class="top-right links">
                   @auth
+                  <a id="hov1" href="{{ url('/phonedata') }}"><span class="glyphicon glyphicon-phone"></span>Phones</a>
                   <a id="hov1" href="{{ url('/comparing') }}"><span class="glyphicon glyphicon-stats"></span>Compare Phones</a>
                   <a id="hov1" href="#bestphones"><span class="glyphicon glyphicon-sort-by-attributes-alt"></span>Best phones</a>
                   <a id="hov1" href="#latestnews"><span class="glyphicon glyphicon-exclamation-sign"></span>Latest News</a>
                   <a id="hov1" href="{{ url('/home') }}"><span class="  glyphicon glyphicon-user"></span>Account</a>
                   @else
+                  <a id="hov1" href="{{ url('/phonedata') }}"><span class="glyphicon glyphicon-phone"></span>Phones</a>
+                  <a id="hov1" href="{{ url('/comparing') }}"><span class="glyphicon glyphicon-stats"></span>Compare Phones</a>
                   <a href="#bestphones">Best phones</a>
                   <a href="#latestnews">Latest News</a>
                   <a href="{{ route('login') }}">Login</a>
